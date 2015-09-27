@@ -11,6 +11,12 @@ def currency_convert():
         if response.status == 200:
             body_text = str(response())
             return body_text
+        if response.status == 'error':
+            return ""
+
+
+
+
 
 
 
