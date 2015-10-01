@@ -1,19 +1,13 @@
 __Jared__ = 'jc321013'
 
+import urllib
 
-def currency_convert():
-    url_string = "https://www.google.com/finance/converter?a=3&from=AUD&to=CAD"
-    response = currency_convert.load_page(url_string)
-    print(response[response.index('response'):])
 
-    def response():
-        response.status = open
-        if response.status == 200:
-            body_text = str(response())
-            return body_text
-        if response.status == 'error':
-            return ""
-
+def currency_convert(url_string):
+    load_page = "https://www.google.com/finance/converter?a=3&from=AUD&to=CAD"
+    result = load_page, currency_convert(url_string)
+    return urllib.urlopen('http://example.com')
+    url_string("https://www.google.com/finance/converter?a=3&from=AUD&to=CAD")
 
 
 
