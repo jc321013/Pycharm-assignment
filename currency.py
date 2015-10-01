@@ -1,15 +1,18 @@
-__Jared__ = 'jc321013'
+__Jared__ = 'jared_000'
 
-import urllib
+import webbrowser
 
-
-def currency_convert(url_string):
-    load_page = "https://www.google.com/finance/converter?a=3&from=AUD&to=CAD"
-    result = load_page, currency_convert(url_string)
-    return urllib.urlopen('http://example.com')
-    url_string("https://www.google.com/finance/converter?a=3&from=AUD&to=CAD")
+webbrowser.open('https://www.google.com/finance/converter?a=1&from=AUD&to=JPY')
 
 
+def currency_convert():
+    response = webbrowser.open
+
+    if response == "84.2517":
+        body_text = str(response)
+        return body_text
+    elif response == "":
+        print("Invalid response")
 
 
 
