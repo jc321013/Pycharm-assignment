@@ -1,5 +1,14 @@
 __jared__ = 'jc321013'
 
+import csv
+
+out = open("currency_details.csv", "rb")
+data = csv.reader(out)
+data = [[row[0], eval(row[5]), eval(row[57])] for row in data]
+
+out.close()
+
+print(data)
 
 
 
