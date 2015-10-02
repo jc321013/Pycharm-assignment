@@ -1,28 +1,10 @@
 __Jared__ = 'jared_000'
 
-import webbrowser
+import urllib.request
 
-webbrowser.open('https://www.google.com/finance/converter?a=1&from=AUD&to=JPY')
+x = urllib.request.urlopen("https://www.google.com/finance/converter?a=1&from=AUD&to=JPY")
 
-
-def currency_convert():
-    response = webbrowser.open
-
-    if response == "84.2517 JPY":
-        body_text = str(response)
-        return body_text
-    elif response == "":
-        print("Invalid response")
-
-
-import webbrowser
-
-webbrowser.open('https://www.google.com/finance/converter?a=84.2521&from=JPY&to=AUD')
-
-
-
-
-
+print(x.read())
 
 
 

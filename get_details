@@ -1,15 +1,5 @@
 __jared__ = 'jc321013'
 
-import webbrowser
-
-webbrowser.open('https://www.google.com/url?q=https://drive.google.com')
-
-
-def country():
-    countries = []
-Australia = 'Australia, AUD, $'
-for i in range'Australia':
-
 
 
 
