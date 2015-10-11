@@ -1,28 +1,28 @@
-__Jared__ = 'jared_000'
+__Jared__ = 'jc321013'
 
 import web_utility
 
 
-def convert(amount, home_currency_code, location_currency_code):
+def convert(value, home_currency_code, location_currency_code):
     try:
-        amount = float(amount)
+        value = float(value)
         home_currency_code != location_currency_code
 
-        url_string = "https://www.google.com/finance/converter?a={}&from={}&to={}".format(str(amount),
+        url_string = "https://www.google.com/finance/converter?a={}&from={}&to={}".format(str(value),
                                                                                           home_currency_code,
                                                                                           location_currency_code)
 
-        outcome = web_utility.load_page(url_string)
-        substring = (outcome[outcome.index('result'):])
-        section = substring.split('>')
-        end_index = (section[2].find(' '))
-        currency_converted_amount = float(section[2][0:end_index])
+        currency_outcome = web_utility.load_page(url_string)
+        substring = (currency_outcome[currency_outcome.index('result'):])
+        currency_section = substring.split('>')
+        end_index = (currency_section[2].find(' '))
+        currency_converted_amount = float(currency_section[2][0:end_index])
         return currency_converted_amount
     except:
         return -1
 
 
-print(convert(1, 'AUD', 'JPY'))
+print(convert('1', 'AUD', 'JPY'))
 
 
 def get_details(country_name):
@@ -39,4 +39,5 @@ def get_details(country_name):
     currency_details_file.close()
 
 print(get_details('Australia'))
+
 
